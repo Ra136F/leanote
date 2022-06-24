@@ -1,0 +1,17 @@
+services:
+  mongo:
+    # 增加这一项
+    networks:
+      - database_only
+
+  leanote:
+    # 增加这一项
+    networks:
+      - public_access
+      - database_only
+
+# 增加这一项
+networks:
+  public_access: # Provide the access for leanote
+  database_only: # Provide the communication between leanote and database only
+    internal: true
