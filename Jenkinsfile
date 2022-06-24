@@ -9,8 +9,8 @@ stage('pull'){
    }
    stage('build'){
    steps{
-      sh 'sudo docker build -t leanote:1.0 .'
-      sh 'sudo docker-compose up -d'
+      sh label:'', scripts:'sudo docker build -t leanote:1.0 .'
+      sh label:'', scripts:'sudo docker-compose up -d'
    }
    }
 }
