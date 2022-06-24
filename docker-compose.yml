@@ -13,6 +13,10 @@ services:
     networks:
       - public_access
       - database_only
+  nginx:
+    image: nginx
+    networks:
+      - database_only
 
 # 增加这一项
 networks:
