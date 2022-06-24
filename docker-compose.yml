@@ -1,10 +1,14 @@
 services:
   mongo:
+    image: mongo
     # 增加这一项
     networks:
       - database_only
 
   leanote:
+    image: leanote:1.0
+    ports:
+      - "9000:9000"
     # 增加这一项
     networks:
       - public_access
